@@ -1,53 +1,42 @@
 
-if (typeof gdjs.evtsExt__Collision3D__PickNearest !== "undefined") {
-  gdjs.evtsExt__Collision3D__PickNearest.registeredGdjsCallbacks.forEach(callback =>
+if (typeof gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition !== "undefined") {
+  gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.registeredGdjsCallbacks.forEach(callback =>
     gdjs._unregisterCallback(callback)
   );
 }
 
-gdjs.evtsExt__Collision3D__PickNearest = {};
-gdjs.evtsExt__Collision3D__PickNearest.idToCallbackMap = new Map();
-gdjs.evtsExt__Collision3D__PickNearest.GDObjectObjects1= [];
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition = {};
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Collision3D__PickNearest.userFunc0xe411e0 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.userFunc0xe3ab90 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
-// TODO If the condition is inverted, the object farthest from the specified position is picked instead.
-const inverted = false;
-
-eventsFunctionContext.returnValue = gdjs._collision3DExtension.pickNearestObject(
-    eventsFunctionContext.getObjectsLists("Object"),
-    eventsFunctionContext.getArgument("PositionX"),
-    eventsFunctionContext.getArgument("PositionY"),
-    eventsFunctionContext.getArgument("PositionZ"),
-    inverted
-);
+const game = runtimeScene.getGame();
+eventsFunctionContext.returnValue = game.isInGameEdition && game.isInGameEdition();
 };
-gdjs.evtsExt__Collision3D__PickNearest.eventsList0 = function(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.eventsList0 = function(runtimeScene, eventsFunctionContext) {
 
 {
 
 
-gdjs.evtsExt__Collision3D__PickNearest.userFunc0xe411e0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.userFunc0xe3ab90(runtimeScene, eventsFunctionContext);
 
 }
 
 
 };
 
-gdjs.evtsExt__Collision3D__PickNearest.func = function(runtimeScene, Object, PositionX, PositionY, PositionZ, parentEventsFunctionContext) {
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.func = function(runtimeScene, parentEventsFunctionContext) {
 let scopeInstanceContainer = null;
 var eventsFunctionContext = {
   _objectsMap: {
-"Object": Object
 },
   _objectArraysMap: {
-"Object": gdjs.objectsListsToArray(Object)
 },
   _behaviorNamesMap: {
 },
-  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("Collision3D"),
-  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("Collision3D"),
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("PanelSpriteSlider"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("PanelSpriteSlider"),
   localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
@@ -89,21 +78,16 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
     return runtimeScene.getLayer(layerName);
   },
   getArgument: function(argName) {
-if (argName === "PositionX") return PositionX;
-if (argName === "PositionY") return PositionY;
-if (argName === "PositionZ") return PositionZ;
     return "";
   },
   getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
 };
 
-gdjs.evtsExt__Collision3D__PickNearest.GDObjectObjects1.length = 0;
 
-gdjs.evtsExt__Collision3D__PickNearest.eventsList0(runtimeScene, eventsFunctionContext);
-gdjs.evtsExt__Collision3D__PickNearest.GDObjectObjects1.length = 0;
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.eventsList0(runtimeScene, eventsFunctionContext);
 
 
 return !!eventsFunctionContext.returnValue;
 }
 
-gdjs.evtsExt__Collision3D__PickNearest.registeredGdjsCallbacks = [];
+gdjs.evtsExt__PanelSpriteSlider__IsInGameEdition.registeredGdjsCallbacks = [];
