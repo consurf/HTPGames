@@ -9,7 +9,7 @@ gdjs.evtsExt__Collision3D__DefineHelperClasses = {};
 gdjs.evtsExt__Collision3D__DefineHelperClasses.idToCallbackMap = new Map();
 
 
-gdjs.evtsExt__Collision3D__DefineHelperClasses.userFunc0xdfe890 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__Collision3D__DefineHelperClasses.userFunc0x1228c40 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 if (gdjs._collision3DExtension) {
     return;
@@ -443,7 +443,7 @@ gdjs.evtsExt__Collision3D__DefineHelperClasses.eventsList0 = function(runtimeSce
 {
 
 
-gdjs.evtsExt__Collision3D__DefineHelperClasses.userFunc0xdfe890(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__Collision3D__DefineHelperClasses.userFunc0x1228c40(runtimeScene, eventsFunctionContext);
 
 }
 

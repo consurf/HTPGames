@@ -1,44 +1,28 @@
-gdjs.MenuCode = {};
-gdjs.MenuCode.localVariables = [];
-gdjs.MenuCode.idToCallbackMap = new Map();
-gdjs.MenuCode.GDCatObjects1= [];
-gdjs.MenuCode.GDCatObjects2= [];
-gdjs.MenuCode.GDBlackAndWhiteLeftVolumeSettingObjects1= [];
-gdjs.MenuCode.GDBlackAndWhiteLeftVolumeSettingObjects2= [];
+gdjs.FirstMenuCode = {};
+gdjs.FirstMenuCode.localVariables = [];
+gdjs.FirstMenuCode.idToCallbackMap = new Map();
+gdjs.FirstMenuCode.GDGreenButtonObjects1= [];
+gdjs.FirstMenuCode.GDGreenButtonObjects2= [];
 
 
-gdjs.MenuCode.eventsList0 = function(runtimeScene) {
+gdjs.FirstMenuCode.eventsList0 = function(runtimeScene) {
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("Cat"), gdjs.MenuCode.GDCatObjects1);
+gdjs.copyArray(runtimeScene.getObjects("GreenButton"), gdjs.FirstMenuCode.GDGreenButtonObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.MenuCode.GDCatObjects1.length;i<l;++i) {
-    if ( gdjs.MenuCode.GDCatObjects1[i].IsClicked(null) ) {
+for (var i = 0, k = 0, l = gdjs.FirstMenuCode.GDGreenButtonObjects1.length;i<l;++i) {
+    if ( gdjs.FirstMenuCode.GDGreenButtonObjects1[i].IsClicked(null) ) {
         isConditionTrue_0 = true;
-        gdjs.MenuCode.GDCatObjects1[k] = gdjs.MenuCode.GDCatObjects1[i];
+        gdjs.FirstMenuCode.GDGreenButtonObjects1[k] = gdjs.FirstMenuCode.GDGreenButtonObjects1[i];
         ++k;
     }
 }
-gdjs.MenuCode.GDCatObjects1.length = k;
+gdjs.FirstMenuCode.GDGreenButtonObjects1.length = k;
 if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "CatScene1", false);
-}
-}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playMusic(runtimeScene, "b4815b730ea5946a1b2d0e32a5cec91c8a1a0bb07be1fa2e5ba2e03b69d75437_Hold on a Sec.aac", true, 100, 1);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Logo", false);
 }
 }
 
@@ -47,23 +31,19 @@ if (isConditionTrue_0) {
 
 };
 
-gdjs.MenuCode.func = function(runtimeScene) {
+gdjs.FirstMenuCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
 
-gdjs.MenuCode.GDCatObjects1.length = 0;
-gdjs.MenuCode.GDCatObjects2.length = 0;
-gdjs.MenuCode.GDBlackAndWhiteLeftVolumeSettingObjects1.length = 0;
-gdjs.MenuCode.GDBlackAndWhiteLeftVolumeSettingObjects2.length = 0;
+gdjs.FirstMenuCode.GDGreenButtonObjects1.length = 0;
+gdjs.FirstMenuCode.GDGreenButtonObjects2.length = 0;
 
-gdjs.MenuCode.eventsList0(runtimeScene);
-gdjs.MenuCode.GDCatObjects1.length = 0;
-gdjs.MenuCode.GDCatObjects2.length = 0;
-gdjs.MenuCode.GDBlackAndWhiteLeftVolumeSettingObjects1.length = 0;
-gdjs.MenuCode.GDBlackAndWhiteLeftVolumeSettingObjects2.length = 0;
+gdjs.FirstMenuCode.eventsList0(runtimeScene);
+gdjs.FirstMenuCode.GDGreenButtonObjects1.length = 0;
+gdjs.FirstMenuCode.GDGreenButtonObjects2.length = 0;
 
 
 return;
 
 }
 
-gdjs['MenuCode'] = gdjs.MenuCode;
+gdjs['FirstMenuCode'] = gdjs.FirstMenuCode;
